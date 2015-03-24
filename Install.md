@@ -1,0 +1,63 @@
+# Introduction #
+
+This page describes how to install maven-overview-plugin.
+
+
+# Details #
+
+maven-overview-plugin is available from [Maven Central Repository](http://repo1.maven.org/maven2/).
+
+You need to reference plugin in your pom.xml:
+```
+<project>
+  ...
+  <build>
+    ...
+    <!-- To use the plugin goals in your POM or parent POM -->
+    <plugins>
+      <plugin>
+        <groupId>com.googlecode.maven-overview-plugin</groupId>
+        <artifactId>maven-overview-plugin</artifactId>
+        <version>RELEASE</version>
+      </plugin>
+      ...
+    </plugins>
+  </build>
+</project>
+```
+
+Now you can execute it from command line:
+```
+mvn com.googlecode.maven-overview-plugin:maven-overview-plugin:RELEASE:overview
+```
+Or if you add to your setting.xml:
+```
+<settings>
+  ...
+  <pluginGroups>
+    <pluginGroup>com.googlecode.maven-overview-plugin</pluginGroup>
+  </pluginGroups>
+</settings>
+```
+Than you can execute plugin by:
+```
+mvn overview:overview
+```
+
+To configure plugin as report add this to your pom.xml file:
+```
+<project>
+  ...
+  <!-- To use the report goals in your POM or parent POM -->
+  <reporting>
+    <plugins>
+      ...
+      <plugin>
+        <groupId>com.googlecode.maven-overview-plugin</groupId>
+        <artifactId>maven-overview-plugin</artifactId>
+        <version>RELEASE</version>
+      </plugin>
+    </plugins>
+  </reporting>
+</project>
+```
