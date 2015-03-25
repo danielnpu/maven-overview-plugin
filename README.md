@@ -1,4 +1,4 @@
-Exported from https://code.google.com/p/maven-overview-plugin/
+Imported from https://code.google.com/p/maven-overview-plugin/
 
 Maven Overview Plugin
 Maven plugin, creating a diagram of all dependencies, dependency graph. (The entire transitive closure.) It supports inclusions/exclusions. Generates reports.
